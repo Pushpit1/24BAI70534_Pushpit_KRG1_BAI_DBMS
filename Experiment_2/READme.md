@@ -57,7 +57,7 @@ JOINING_DATE DATE
 **Output:**
 
 
-![Books Table Creation](Exp2_Images/1.png)
+![Books Table Creation](assets/1(1).png)
 
 ### 2. Data Insertion: EMPLOYEE
 **Input:**
@@ -75,7 +75,7 @@ INSERT INTO EMPLOYEE VALUES(7, 'Aanya', 'IT', 26000, '2022-07-07')
 **Output:**
 
 
-![Books Table Creation](Exp2_Images/2.png)
+![Books Table Creation](assets/2(1).png)
 
 ### 3. Getting the average salary of various departments
 **Input:**
@@ -88,7 +88,7 @@ GROUP BY DEPARTMENT
 **Output:**
 
 
-![Books Table Creation](Exp2_Images/3.png)
+![Books Table Creation](assets/3(1).png)
 
 ### 4. Getting employees with a salary of more than 20000
 **Input:**
@@ -103,7 +103,7 @@ HAVING SALARY>20000
 **Output:**
 
 
-![Books Table Creation](Exp2_Images/4.png)
+![Books Table Creation](assets/4(1).png)
 
 ### 5. Getting the department with an average salary of more than 30000
 **Input:**
@@ -118,7 +118,7 @@ HAVING AVG(SALARY)>30000
 **Output:**
 
 
-![Books Table Creation](Exp2_Images/5.png)
+![Books Table Creation](assets/5(1).png)
 
 ### 6. Arranging the departments in decreasing order of their average salaries
 **Input:**
@@ -132,7 +132,7 @@ ORDER BY AVG(SALARY) DESC
 **Output:**
 
 
-![Books Table Creation](Exp2_Images/6.png)
+![Books Table Creation](assets/6(1).png)
 
 ---
 
