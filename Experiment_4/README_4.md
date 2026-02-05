@@ -54,9 +54,9 @@ END;
 **Output:**
 
 
-![Output of Problem 1](Exp4_Images/1.png)
+![Output of Problem 1](Images/1.png)
 
-![Output of Problem 1](Exp4_Images/2.png)
+![Output of Problem 1](Images/2.png)
 
 
 
@@ -87,9 +87,9 @@ END;
 **Output:**
 
 
-![Output of Problem 2](Exp4_Images/3.png)
+![Output of Problem 2](Images/3.png)
 
-![Output of Problem 2](Exp4_Images/4.png)
+![Output of Problem 2](Images/4.png)
 
 
 
@@ -119,9 +119,9 @@ END;
 **Output:**
 
 
-![Output of Problem 3](Exp4_Images/5.png)
+![Output of Problem 3](Images/5.png)
 
-![Output of Problem 3](Exp4_Images/6.png)
+![Output of Problem 3](Images/6.png)
 
 
 
@@ -150,9 +150,9 @@ END;
 **Output:**
 
 
-![Output of Problem 4](Exp4_Images/7.png)
+![Output of Problem 4](Images/7.png)
 
-![Output of Problem 4](Exp4_Images/8.png)
+![Output of Problem 4](Images/8.png)
 
 
 ---
