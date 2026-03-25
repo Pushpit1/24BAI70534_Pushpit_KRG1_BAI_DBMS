@@ -65,68 +65,75 @@ PROCEDURE:
 
 
 CODE:
-CREATE TABLE departments(
-    dept_id INT PRIMARY KEY,
-    dept_name VARCHAR(20)
-)
-
-CREATE TABLE employees(
-    emp_id INT PRIMARY KEY,
-    emp_name VARCHAR(20),
-    dept_id INT REFERENCES departments(dept_id),
-    salary NUMERIC
-)
-
-INSERT INTO departments VALUES
-(1, 'IT'),
-(2, 'HR'),
-(3, 'Finance')
-
-INSERT INTO employees VALUES
-(101, 'Amit', 1, 90000),
-(102, 'Riya', 1, 80000),
-(103, 'Karan', 2, 60000),
-(104, 'Neha', 2, 65000),
-(105, 'Arjun', 3, 55000),
-(106, 'Priya', 1, 88000)
-
--- simple View
-CREATE VIEW simple_view AS
-SELECT emp_name, salary
-FROM employees
-WHERE salary > 70000
-
-SELECT * FROM simple_view
-
--- complex view
-CREATE VIEW complex_view AS
-SELECT d.dept_name,
-       COUNT(e.emp_id) AS total_employees,
-       AVG(e.salary) AS avg_salary
-FROM employees e
-JOIN departments d
-ON e.dept_id = d.dept_id
-GROUP BY d.dept_name
-
-SELECT * FROM complex_view
-
--- materialised view
-CREATE MATERIALIZED VIEW materialized_view AS
-SELECT d.dept_name,
-       COUNT(e.emp_id) AS total_employees,
-       AVG(e.salary) AS avg_salary
-FROM employees e
-JOIN departments d
-ON e.dept_id = d.dept_id
-GROUP BY d.dept_name
-
-SELECT * FROM materialized_view
-
-REFRESH MATERIALIZED VIEW materialized_view
-
-EXPLAIN ANALYZE SELECT * FROM simple_view
-EXPLAIN ANALYZE SELECT * FROM complex_view
-EXPLAIN ANALYZE SELECT * FROM materialized_view
+CREATE TABLE divisions( 
+    div_id INT PRIMARY KEY, 
+    div_name VARCHAR(20) 
+); 
+CREATE TABLE workers( 
+    worker_id INT PRIMARY KEY, 
+    worker_name VARCHAR(20), 
+    div_id INT REFERENCES divisions(div_id), 
+    pay NUMERIC 
+); 
+INSERT INTO divisions VALUES 
+(10, 'Tech'), 
+(20, 'Admin'), 
+(30, 'Accounts'); 
+INSERT INTO workers VALUES 
+(201, 'Rahul', 10, 92000), 
+(202, 'Sneha', 10, 78000), 
+ 
+ 
+Apex Institute of Technology 
+Computer Science & Engineering 
+ 
+(203, 'Vikram', 20, 61000), 
+(204, 'Pooja', 20, 67000), 
+(205, 'Ankit', 30, 54000), 
+(206, 'Kriti', 10, 86000); 
+ 
+-- simple view 
+CREATE VIEW view_basic AS 
+SELECT worker_name, pay 
+FROM workers 
+WHERE pay > 75000; 
+ 
+SELECT * FROM view_basic; 
+ 
+-- complex view 
+CREATE VIEW view_summary AS 
+SELECT d.div_name, 
+       COUNT(w.worker_id) AS total_workers, 
+       AVG(w.pay) AS avg_pay 
+FROM workers w 
+JOIN divisions d 
+ON w.div_id = d.div_id 
+GROUP BY d.div_name; 
+ 
+ 
+ 
+Apex Institute of Technology 
+Computer Science & Engineering 
+ 
+SELECT * FROM view_summary; 
+ 
+-- materialized view 
+CREATE MATERIALIZED VIEW view_store AS 
+SELECT d.div_name, 
+       COUNT(w.worker_id) AS total_workers, 
+       AVG(w.pay) AS avg_pay 
+FROM workers w 
+JOIN divisions d 
+ON w.div_id = d.div_id 
+GROUP BY d.div_name; 
+ 
+SELECT * FROM view_store; 
+ 
+REFRESH MATERIALIZED VIEW view_store; 
+ 
+EXPLAIN ANALYZE SELECT * FROM view_basic; 
+EXPLAIN ANALYZE SELECT * FROM view_summary; 
+EXPLAIN ANALYZE SELECT * FROM view_store
 
 
 I/O ANALYSIS: 
