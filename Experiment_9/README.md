@@ -152,23 +152,34 @@ SELECT * FROM find_learner(1);I/O ANALYSIS:
 1.	Create a table 
 The students table is successfully created with fields such as id, name, age, and course. The id is defined as a primary key with auto-increment, ensuring unique student records.
 
+ <img src="1.png" width="223" height="53">
+
  
 2.	Creating a Procedure (INSERT)
 The stored procedure add_student is created successfully. It accepts parameters (name, age, course) and inserts a new record into the table. A new record is inserted into the students table successfully. 
- 
+ <img src="2.png" width="266" height="60">
+ <img src="3.png" width="232" height="52">
+
  
 3.	Creating a Function (READ)
 The function get_students is created to fetch all records from the table. Displays all student records present in the table.
+ <img src="4.png" width="374" height="73">
+
  
 4.	UPDATE Operation
 The stored procedure update_student is created to update existing student details using ID. The record with id = 1 is successfully updated with new values.
+ <img src="5.png" width="374" height="73">
+
  
 5.	DELETE Operation
 The stored procedure delete_student is created to delete a student record based on ID. The record with id = 1 is removed from the table.
+ <img src="6.png" width="320" height="89">
+
  
 6.	SEARCH Operation
 The function search_student is created to search records using id. It displays records with the given id.
- 
+  <img src="7.png" width="317" height="87">
+
 
 
 LEARNING OUTCOMES: 
