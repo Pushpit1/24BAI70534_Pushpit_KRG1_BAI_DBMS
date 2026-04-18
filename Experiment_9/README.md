@@ -1,46 +1,61 @@
 Experiment 9
-Name: Pushpit kumar gaur	
-UID: 24BAI70534
-Branch: B.E. CSE (AIML)
+
+Name: Trimann Kaur	
+
+UID: 24BAI70511
+
+Branch: B.E. CSE (AIML)	
+
 Section: 24AIT_KRG-G1
+
 Semester: 4	
-Date of Performance: 01.04.2026
+
+Date of Performance: 17.04.2026
+
 Subject Name: Database Management System	
+
 Subject Code: 24CSH-298
 
-AIM: To design and implement stored procedures in PostgreSQL for performing Create, Read, Update, and Delete (CRUD) operations on database tables in an efficient and reusable manner.
+
+AIM: To create and implement PL/SQL packages by developing a package specification and package body containing procedures and shared cursors, in order to achieve modular, reusable, and efficient database programming.
+
 
 OBJECTIVES: 
-•	To understand the concept and importance of stored procedures. 
-•	To implement parameterized stored procedures. 
-•	To perform INSERT, UPDATE, DELETE, and SEARCH operations. 
-•	To improve database performance and security. 
-•	To gain industry-relevant procedural SQL experience. 
+
+•	To design and implement a PL/SQL package that includes procedures and shared cursors for structured and modular program development. 
+
 
 SOFTWARE REQUIREMENTS: 
+
 •	Database Management System:
-o	PostgreSQL Database
-•	Database Administration Tool / Client Tool:
-o	pgAdmin 
+
+o	Oracle
+
+•	Database Administration Tool:
+
+o	Oracle SQL Developer
+
 
 PRACTICAL/EXPERIMENT STEPS: 
-1.	A students table was created to store student details like ID, name, age, and course. 
-2.	A stored procedure add_student was implemented to insert new records. 
-3.	A function get_students was created to retrieve all records from the table. 
-4.	A stored procedure update_student was designed to update existing student data. 
-5.	A stored procedure delete_student was implemented to remove records using ID. 
-6.	A function search_student was created to search students by name. 
-7.	All CRUD operations were tested using procedure calls and SELECT statements. 
+1.	An employees table was created to store employee details such as ID, name, salary, and department. 
+2.	Sample records were inserted into the employees table for testing purposes. 
+3.	A PL/SQL package specification was created to declare procedures related to employee data. 
+4.	A package body was developed to implement the logic of the declared procedures. 
+5.	A shared cursor was defined inside the package to retrieve employee records efficiently. 
+6.	A procedure display_all_employees was implemented to display all employee details using the cursor. 
+7.	A procedure display_employee was created to fetch details of a specific employee using employee ID. 
+8.	The package procedures were executed to verify correct functionality and output.
 
 
 PROCEDURE: 
-1.	PostgreSQL (pgAdmin) was opened and the required database was selected. 
-2.	The students table was created using CREATE TABLE with appropriate fields. 
-3.	Stored procedures were written using CREATE OR REPLACE PROCEDURE for INSERT, UPDATE, and DELETE operations. 
-4.	Functions were created using CREATE OR REPLACE FUNCTION for SELECT and SEARCH operations. 
-5.	Parameters were passed to procedures to perform dynamic operations. 
-6.	Procedures were executed using CALL and functions using SELECT. 
-7.	The output was verified to ensure correct implementation of CRUD operations. 
+1.	Oracle SQL environment (SQL Developer / FreeSQL) was opened and the required database was selected. 
+2.	The employees table was created using the CREATE TABLE command. 
+3.	Sample data was inserted into the table using INSERT statements. 
+4.	A package specification was created using CREATE OR REPLACE PACKAGE to declare procedures. 
+5.	A package body was created using CREATE OR REPLACE PACKAGE BODY to define procedures and a shared cursor. 
+6.	Procedures were written to display all employees and to retrieve a specific employee by ID. 
+7.	The package procedures were executed using BEGIN ... END; blocks. 
+8.	The output was displayed using DBMS_OUTPUT.PUT_LINE and verified for correctness.
 
 CODE:
 -- Create table
