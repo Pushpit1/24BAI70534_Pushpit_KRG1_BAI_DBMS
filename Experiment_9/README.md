@@ -1,8 +1,8 @@
 Experiment 9
 
-Name: Trimann Kaur	
+Name: Pushpit kumar gaur
 
-UID: 24BAI70511
+UID: 24BAI70534
 
 Branch: B.E. CSE (AIML)	
 
